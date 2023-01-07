@@ -2,8 +2,8 @@ import {getTvList, searchTv} from "./Api";
 import {
     Divider, Text, SimpleGrid,
     Card, CardHeader, CardBody, 
-    Heading, Skeleton,
-    Input, Image,
+    Heading, Tabs, TabList, TabPanels, Tab, TabPanel,
+    Input, Image, Skeleton,
     ChakraProvider,
   } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
@@ -63,9 +63,22 @@ const App = () => {
               <Heading color='teal' >NUEW CINEMA</Heading>
             </Skeleton>
             <Input className="tv-search" htmlSize={70} width="auto" variant='flushed' placeholder='Cari Series..' _placeholder={{ color: '#fff'}} onChange={({ target }) => search(target.value)}/>
-              <SimpleGrid marginBottom={10} spacing={4} templateColumns='repeat(auto-fill, minmax(250px, 1fr))'>
-                <PopularTvList/>
-              </SimpleGrid>
+              <Tabs isFitted variant='enclosed'>
+                <TabList mb='1em'>
+                  <Tab>TV Series</Tab>
+                  <Tab>Movie</Tab>
+                </TabList>
+                <TabPanels>
+                  <TabPanel>
+                    <SimpleGrid marginBottom={10} spacing={4} templateColumns='repeat(auto-fill, minmax(250px, 1fr))'>
+                      <PopularTvList/>
+                    </SimpleGrid>
+                  </TabPanel>
+                  <TabPanel>
+                    <p>Soon!</p>
+                  </TabPanel>
+                </TabPanels>
+              </Tabs>
           </ChakraProvider>
 
       </header>
