@@ -1,4 +1,5 @@
 .App {
+<<<<<<< HEAD
   text-align: center;
 }
 
@@ -48,3 +49,29 @@
   margin-top: 26px;
   font-weight: bold;
 }
+=======
+    text-align: center;
+  }
+  
+  
+  .App-header {
+    background-color: #282c34;
+    padding-top: 50px;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+
+  .tv-search{
+    width: 450px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    font-size: 24px;
+  }
+>>>>>>> 76ad55a77b60a776f88eff8fa8fe3c171da4c049
